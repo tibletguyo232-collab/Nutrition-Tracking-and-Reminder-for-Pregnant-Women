@@ -72,14 +72,74 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Meal Data 
   const meals = [
-    { id: 1, name: 'Oatmeal', type: 'Breakfast', image: 'https://via.placeholder.com/200x120', time: '08:00', calories: 150, protein: 5, carbs: 27, fats: 3, sodium: 50 },
-    { id: 2, name: 'Egg Sandwich', type: 'Breakfast', image: 'https://via.placeholder.com/200x120', time: '08:30', calories: 220, protein: 12, carbs: 25, fats: 8, sodium: 300 },
-    { id: 3, name: 'Chicken Salad', type: 'Lunch', image: 'https://via.placeholder.com/200x120', time: '12:30', calories: 250, protein: 30, carbs: 10, fats: 12, sodium: 400 },
-    { id: 4, name: 'Grilled Salmon', type: 'Dinner', image: 'https://via.placeholder.com/200x120', time: '19:00', calories: 300, protein: 35, carbs: 0, fats: 20, sodium: 120 },
-    { id: 5, name: 'Almonds', type: 'Snack', image: 'https://via.placeholder.com/200x120', time: '15:30', calories: 100, protein: 4, carbs: 6, fats: 9, sodium: 0 },
-    { id: 6, name: 'Fruit Yogurt', type: 'Snack', image: 'https://via.placeholder.com/200x120', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 }
-  ];
+    { id: 1, name: 'Beyeaynet', type: 'Breakfast', image: '../imgs/beyaynet.jpg', time: '08:00', calories: 150, protein: 5, carbs: 27, fats: 3, sodium: 50 },
+    { id: 2, name: 'Egg Sandwich', type: 'Breakfast', image: '../imgs/avocado juice.jpg', time: '08:30', calories: 220, protein: 12, carbs: 25, fats: 8, sodium: 300 },
+    { id: 3, name: 'Asa(fish)', type: 'Breakfast', image: '../imgs/fish.jpg', time: '12:30', calories: 250, protein: 30, carbs: 10, fats: 12, sodium: 400 },
+    { id: 4, name: 'Bula', type: 'Breakfast', image: '../imgs/bula.jpg', time: '19:00', calories: 300, protein: 35, carbs: 0, fats: 20, sodium: 120 },
+    { id: 5, name: 'Yetef Chechebsa', type: 'Breakfast', image:'../imgs/chechebsa.jpg', time: '15:30', calories: 100, protein: 4, carbs: 6, fats: 9, sodium: 0 },
+    { id: 6, name: 'Chuko', type: 'Breakfast', image:'../imgs/chuko.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 7, name: 'Egg', type: 'Breakfast', image:'../imgs/egg.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 8, name: 'Enjera Firfir', type: 'Breakfast', image:'../imgs/Enjera firfir.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 9, name: 'Genfo(porrage)', type: 'Breakfast', image:'../imgs/genfo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 10, name: 'Hilbet', type: 'Breakfast', image:'../imgs/hilbet.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 11, name: 'Tihlo', type: 'Breakfast', image:'../imgs/Tihlo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 12, name: 'Papaya Juice', type: 'Breakfast', image:'../imgs/papaya juice.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 13, name: 'Shiro', type: 'Breakfast', image:'../imgs/shiro.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 14, name: 'Chechebsa', type: 'Breakfast', image:'../imgs/yesinde chechebsa.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 15, name: 'Yetekekele boklo', type: 'Breakfast', image:'../imgs/yetekekele bekolo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
 
+
+    { id: 16, name: 'Beyeaynet', type: 'Lunch', image: '../imgs/beyaynet.jpg', time: '08:00', calories: 150, protein: 5, carbs: 27, fats: 3, sodium: 50 },
+    { id: 17, name: 'Egg Sandwich', type: 'Lunch', image: '../imgs/avocado juice.jpg', time: '08:30', calories: 220, protein: 12, carbs: 25, fats: 8, sodium: 300 },
+    { id: 18, name: 'Asa(fish)', type: 'Lunch', image: '../imgs/fish.jpg', time: '12:30', calories: 250, protein: 30, carbs: 10, fats: 12, sodium: 400 },
+    { id: 19, name: 'Bula', type: 'Lunch', image: '../imgs/bula.jpg', time: '19:00', calories: 300, protein: 35, carbs: 0, fats: 20, sodium: 120 },
+    { id: 20, name: 'Yetef Chechebsa', type: 'Lunch', image:'../imgs/chechebsa.jpg', time: '15:30', calories: 100, protein: 4, carbs: 6, fats: 9, sodium: 0 },
+    { id: 21, name: 'Chuko', type: 'Lunch', image:'../imgs/chuko.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 22, name: 'Egg', type: 'Lunch', image:'../imgs/egg.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 23, name: 'Enjera Firfir', type: 'Lunch', image:'../imgs/Enjera firfir.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 24, name: 'Genfo(porrage)', type: 'Lunch', image:'../imgs/genfo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 25, name: 'Hilbet', type: 'Lunch', image:'../imgs/hilbet.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 26, name: 'Tihlo', type: 'Lunch', image:'../imgs/Tihlo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 27, name: 'Papaya Juice', type: 'Lunch', image:'../imgs/papaya juice.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 28, name: 'Shiro', type: 'Lunch', image:'../imgs/shiro.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 29, name: 'Chechebsa', type: 'Lunch', image:'../imgs/yesinde chechebsa.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 30, name: 'Yetekekele boklo', type: 'Lunch', image:'../imgs/yetekekele bekolo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+  
+  
+      { id: 31, name: 'Beyeaynet', type: 'Snack', image: '../imgs/beyaynet.jpg', time: '08:00', calories: 150, protein: 5, carbs: 27, fats: 3, sodium: 50 },
+    { id: 32, name: 'Egg Sandwich', type: 'Snack', image: '../imgs/avocado juice.jpg', time: '08:30', calories: 220, protein: 12, carbs: 25, fats: 8, sodium: 300 },
+    { id: 33, name: 'Asa(fish)', type: 'Snack', image: '../imgs/fish.jpg', time: '12:30', calories: 250, protein: 30, carbs: 10, fats: 12, sodium: 400 },
+    { id: 34, name: 'Bula', type: 'Snack', image: '../imgs/bula.jpg', time: '19:00', calories: 300, protein: 35, carbs: 0, fats: 20, sodium: 120 },
+    { id: 35, name: 'Yetef Chechebsa', type: 'Snack', image:'../imgs/chechebsa.jpg', time: '15:30', calories: 100, protein: 4, carbs: 6, fats: 9, sodium: 0 },
+    { id: 36, name: 'Chuko', type: 'Snack', image:'../imgs/chuko.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 37, name: 'Egg', type: 'Snack', image:'../imgs/egg.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 38, name: 'Enjera Firfir', type: 'Snack', image:'../imgs/Enjera firfir.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 39, name: 'Genfo(porrage)', type: 'Snack', image:'../imgs/genfo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 40, name: 'Hilbet', type: 'Snack', image:'../imgs/hilbet.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 41, name: 'Tihlo', type: 'Snack', image:'../imgs/Tihlo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 42, name: 'Papaya Juice', type: 'Snack', image:'../imgs/papaya juice.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 43, name: 'Shiro', type: 'Snack', image:'../imgs/shiro.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 44, name: 'Chechebsa', type: 'Snack', image:'../imgs/yesinde chechebsa.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 45, name: 'Yetekekele boklo', type: 'Snack', image:'../imgs/yetekekele bekolo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+
+        { id: 46, name: 'Beyeaynet', type: 'Dinner', image: '../imgs/beyaynet.jpg', time: '08:00', calories: 150, protein: 5, carbs: 27, fats: 3, sodium: 50 },
+    { id: 47, name: 'Egg Sandwich', type: 'Dinner', image: '../imgs/avocado juice.jpg', time: '08:30', calories: 220, protein: 12, carbs: 25, fats: 8, sodium: 300 },
+    { id: 48, name: 'Asa(fish)', type: 'Dinner', image: '../imgs/fish.jpg', time: '12:30', calories: 250, protein: 30, carbs: 10, fats: 12, sodium: 400 },
+    { id: 49, name: 'Bula', type: 'Dinner', image: '../imgs/bula.jpg', time: '19:00', calories: 300, protein: 35, carbs: 0, fats: 20, sodium: 120 },
+    { id: 50, name: 'Yetef Chechebsa', type: 'Dinner', image:'../imgs/chechebsa.jpg', time: '15:30', calories: 100, protein: 4, carbs: 6, fats: 9, sodium: 0 },
+    { id: 51, name: 'Chuko', type: 'Dinner', image:'../imgs/chuko.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 52, name: 'Egg', type: 'Dinner', image:'../imgs/egg.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 53, name: 'Enjera Firfir', type: 'Dinner', image:'../imgs/Enjera firfir.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 54, name: 'Genfo(porrage)', type: 'Dinner', image:'../imgs/genfo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 55, name: 'Hilbet', type: 'Dinner', image:'../imgs/hilbet.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 56, name: 'Tihlo', type: 'Dinner', image:'../imgs/Tihlo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 57, name: 'Papaya Juice', type: 'Dinner', image:'../imgs/papaya juice.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 58, name: 'Shiro', type: 'Dinner', image:'../imgs/shiro.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 59, name: 'Chechebsa', type: 'Dinner', image:'../imgs/yesinde chechebsa.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 },
+    { id: 60, name: 'Yetekekele boklo', type: 'Dinner', image:'../imgs/yetekekele bekolo.jpg', time: '16:00', calories: 120, protein: 6, carbs: 18, fats: 3, sodium: 40 }
+  
+  ];
+        
   // Render Meals
   async function renderMeals() {
     await loadSavedIntake();

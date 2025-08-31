@@ -1,32 +1,43 @@
 
 //  Get all reminders (only user’s) 
-exports.getReminders = async (req, res) => {
+// Get reminders (all for user or by supplement)
+// Get all reminders (including supplement-linked) for the logged-in user
+exports.getAllReminders = async (req, res) => {
   try {
-    const reminders = await Reminder.find({ user: req.user.id }).sort({ createdAt: -1 });
+    const userId = req.user.id;
+
+    // Fetch reminders, both standalone and supplement-linked
+    const reminders = await Reminder.find({ user: userId })
+      .populate("supplement", "name dosage times"); // optional: fetch supplement info
+
     res.json(reminders);
   } catch (err) {
-    res.status(500).json({ error: "Server error" });
+    console.error("Error fetching reminders:", err);
+    res.status(500).json({ message: "Server error", error: err.message });
   }
 };
+
 
 // Create new reminder 
 exports.createReminder = async (req, res) => {
   try {
-    const { title, description, date, category, status } = req.body;
+    const { title, description, datetime, category, status, supplementId } = req.body;
 
     const newReminder = new Reminder({
       title,
       description,
-      date,
+      datetime: datetime ? new Date(datetime) : new Date(),
       category,
       status: status || "pending",
-      user: req.user.id
+      user: req.user.id,
+      supplement: supplementId || null
     });
 
     await newReminder.save();
     res.status(201).json(newReminder);
   } catch (err) {
-    res.status(500).json({ error: "Server error" });
+    console.error("Error creating reminder:", err);
+    res.status(500).json({ message: "Server error", error: err.message });
   }
 };
 

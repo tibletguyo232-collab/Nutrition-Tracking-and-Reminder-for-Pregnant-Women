@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/adminPageStyle.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>Admin Panel</h2>
+    <ul>
+      <li><a href="#" id="dashboardLink">Dashboard</a></li>
+      <li><a href="#" id="usersLink">Users</a></li>
+      <li><a href="#" id="remindersLink">Reminders</a></li>
+      <li><a href="#" id="reportsLink">Reports</a></li>
+      <li><button id="logoutBtn">Logout</button></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <h1>Dashboard</h1>
+    <div class="cards">
+      <div class="card">Total Users: <span id="totalUsers">0</span></div>
+      <div class="card">Reminders Sent: <span id="totalReminders">0</span></div>
+      <div class="card">Completed: <span id="completedReminders">0</span></div>
+    </div>
+    <section id="dynamicContent"></section>
+  </main>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>

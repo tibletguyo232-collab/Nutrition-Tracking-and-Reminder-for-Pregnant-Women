@@ -1,30 +1,31 @@
-document.getElementById('login-form').addEventListener('submit', async (e) => {
+const loginForm = document.getElementById("login-form"); // match HTML ID
+
+loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value;
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
 
   try {
-const res = await fetch('http://localhost:5000/api/users/login', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ email, password })
-});
+    const res = await fetch("http://localhost:5000/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password })
+    });
 
     const data = await res.json();
+    console.log("res.ok:", res.ok);
+    console.log("Response data:", data);
 
-    if (!res.ok) {
-      alert(data.msg || 'Login failed');
-      return;
+    if (res.ok && data.token) {
+      localStorage.setItem("token", data.token);
+      alert("Login successful!");
+      window.location.href = "home.html"; // redirect after login
+    } else {
+      alert(data.message || "Login failed");
     }
-    
-    localStorage.setItem('token', data.token);
-
-    alert('Login successful!');
-    window.location.href = 'home.html';
-
   } catch (err) {
     console.error(err);
-    alert('Server error. Please try again later.');
+    alert("Network error");
   }
 });
